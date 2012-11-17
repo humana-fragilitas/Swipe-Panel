@@ -7,7 +7,7 @@
  *
  * Demo page: http://www.humanafragilitas.com/demos/swipe_panel/swipePanel.php
  *
- * Further insight: 
+ * Further insight: http://www.humanafragilitas.com/archives/508
  *
  * @author andrea(at)humanafragilitas(dot)com
  * @module HF
