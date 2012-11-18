@@ -16,12 +16,12 @@ Usage
 ### html markup ###
 <pre><code>&lt;!-- basic required markup structure --&gt;
 
-&lt;!-- the outer element serves as positioning context: see letter «a» in the picture below --&gt;
+&lt;!-- the outer element serves as positioning context --&gt;
 &lt;div id=&quot;swipePanelWrapper&quot;&gt;
 
    &lt;!-- your content here --&gt;
 
-   &lt;!-- the inner element serves as the swipe panel wrapper: see letter «c» in the picture below --&gt;
+   &lt;!-- the inner element serves as the swipe panel wrapper --&gt;
    &lt;div id=&quot;swipePanel&quot;&gt;
 
       &lt;!-- your content here --&gt;
