@@ -924,5 +924,4 @@ HF.SwipePanel = function SwipePanel(confObject){
     
     /* END: constructor default actions *************************/
 
-}; // HF.SwipePanel class
-    
+}; // HF.SwipePanel class 
