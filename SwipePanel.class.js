@@ -130,10 +130,11 @@ HF.SwipePanel = function SwipePanel(confObject){
         wrapperLabelCSSOpen.push("border-top-right-radius: 0;");
         wrapperLabelCSSOpen.push("border-bottom-left-radius: 4px;");
         wrapperLabelCSSOpen.push("border-bottom-right-radius: 4px;");
-        wrapperLabelCSSOpen.push("text-shadow: 0 -1px #fade92;");
+        wrapperLabelCSSOpen.push("text-shadow: 0 -1px ");
+		wrapperLabelCSSClosed.push(configuration.swipePanelLabelColours[2] + ";");
         wrapperLabelCSSOpen.push("box-shadow: 0 2px 4px rgba(0,0,0,.5),");
         wrapperLabelCSSOpen.push("0 1px 1px rgba(0,0,0,.2),");
-        wrapperLabelCSSOpen.push("0 1px 1px #53441C inset;");
+        wrapperLabelCSSOpen.push("0 1px 1px #333333 inset;");
         
         // swipe panel label css (status: closed)
         wrapperLabelCSSClosed.push("border-top-left-radius: 4px;");
@@ -144,7 +145,7 @@ HF.SwipePanel = function SwipePanel(confObject){
         wrapperLabelCSSClosed.push(configuration.swipePanelLabelColours[2] + ";");
         wrapperLabelCSSClosed.push("box-shadow: 0 -2px 5px rgba(0,0,0,.7),");
         wrapperLabelCSSClosed.push("0 -1px 1px rgba(0,0,0,.4),");
-        wrapperLabelCSSClosed.push("0 -1px 1px #53441C inset;");
+        wrapperLabelCSSClosed.push("0 -1px 1px #333333 inset;");
         
         // swipe panel label element
         wrapperLabel = d.createElement("span");
@@ -396,11 +397,11 @@ HF.SwipePanel = function SwipePanel(confObject){
     /* END: Constructors ****************************************/
     
     /**
-     *  Manages html markup templates,
-     *  css3 animations
-     *  @class ManageInterface
-     *  @private
-     *  @static
+     * Manages html markup templates,
+     * css3 animations
+     * @class ManageInterface
+     * @private
+     * @static
      */
     
     ManageInterface = (function(){
@@ -413,9 +414,9 @@ HF.SwipePanel = function SwipePanel(confObject){
         return {
             
             /**
-             *  Builds the application interface
-             *  @method buildInterface
-             *  @static
+             * Builds the application interface
+             * @method buildInterface
+             * @static
              */
             
             buildInterface: function(){
@@ -457,10 +458,10 @@ HF.SwipePanel = function SwipePanel(confObject){
             }, // buildInterface()
             
             /**
-             *  Retrieves swipe panel offset parent element size
-             *  @method getOffsetParentSize
-             *  @return {Object} Object describing element size (width, height, landscape mode)
-             *  @static
+             * Retrieves swipe panel offset parent element size
+             * @method getOffsetParentSize
+             * @return {Object} Object describing element size (width, height, landscape mode)
+             * @static
              */
              
             getOffsetParentSize: function(){
@@ -484,10 +485,10 @@ HF.SwipePanel = function SwipePanel(confObject){
             }, // getOffsetParentSize()
             
             /**
-             *  Retrieves a reference to the swipe panel offset parent instance
-             *  @method getOffsetParentInstance
-             *  @return {Object} HTMLElement: swipe panel offset parent instance
-             *  @static
+             * Retrieves a reference to the swipe panel offset parent instance
+             * @method getOffsetParentInstance
+             * @return {Object} HTMLElement: swipe panel offset parent instance
+             * @static
              */
              
             getOffsetParentInstance: function(){
@@ -497,10 +498,10 @@ HF.SwipePanel = function SwipePanel(confObject){
             }, // getOffsetParentInstance()
             
             /**
-             *  Retrieves a reference to the swipe panel wrapper instance
-             *  @method getWrapperInstance
-             *  @return {Object} HTMLElement: swipe panel wrapper instance
-             *  @static
+             * Retrieves a reference to the swipe panel wrapper instance
+             * @method getWrapperInstance
+             * @return {Object} HTMLElement: swipe panel wrapper instance
+             * @static
              */
             
             getWrapperInstance: function(){
@@ -510,10 +511,10 @@ HF.SwipePanel = function SwipePanel(confObject){
             }, // getWrapperInstance();
             
             /**
-             *  Retrieves a reference to the swipe panel label instance
-             *  @method getLabelInstance
-             *  @return {Object} HTMLElement: swipe panel label instance
-             *  @static
+             * Retrieves a reference to the swipe panel label instance
+             * @method getLabelInstance
+             * @return {Object} HTMLElement: swipe panel label instance
+             * @static
              */
             
             getLabelInstance: function(){
@@ -527,10 +528,10 @@ HF.SwipePanel = function SwipePanel(confObject){
     }()); // ManageInterface class
     
     /**
-     *  Manages UI events
-     *  @class ManageEvents
-     *  @private
-     *  @static
+     * Manages UI events
+     * @class ManageEvents
+     * @private
+     * @static
      */
      
     ManageEvents = (function(){
@@ -543,9 +544,9 @@ HF.SwipePanel = function SwipePanel(confObject){
         return {
             
             /**
-             *  Attaches event listeners to UI elements
-             *  @method attachEventListeners
-             *  @static
+             * Attaches event listeners to UI elements
+             * @method attachEventListeners
+             * @static
              */
             
             attachEventListeners: function(){
@@ -566,10 +567,10 @@ HF.SwipePanel = function SwipePanel(confObject){
             }, // attachEventListeners()
             
             /**
-             *  Handles transitionend event
-             *  @method transitionEndHandler
-             *  @param {Object} evt Event object
-             *  @static
+             * Handles transitionend event
+             * @method transitionEndHandler
+             * @param {Object} evt Event object
+             * @static
              */
              
             transitionEndHandler: function(evt){
@@ -600,10 +601,10 @@ HF.SwipePanel = function SwipePanel(confObject){
             }, // transitionEndHandler()
             
             /**
-             *  Handles touchstart event
-             *  @method touchStartHandler
-             *  @param {Object} evt Event object
-             *  @static
+             * Handles touchstart event
+             * @method touchStartHandler
+             * @param {Object} evt Event object
+             * @static
              */
             
             touchStartHandler: function(evt){
@@ -625,10 +626,10 @@ HF.SwipePanel = function SwipePanel(confObject){
             }, // touchStartHandler()
             
             /**
-             *  Handles touchmove event
-             *  @method touchMoveHandler
-             *  @param {Object} evt Event object
-             *  @static
+             * Handles touchmove event
+             * @method touchMoveHandler
+             * @param {Object} evt Event object
+             * @static
              */
             
             touchMoveHandler: function(evt){
@@ -658,10 +659,10 @@ HF.SwipePanel = function SwipePanel(confObject){
             }, // touchMoveHandler()
             
             /**
-             *  Handles touchend event
-             *  @method touchEndHandler
-             *  @param {Object} evt Event object
-             *  @static
+             * Handles touchend event
+             * @method touchEndHandler
+             * @param {Object} evt Event object
+             * @static
              */
             
             touchEndHandler: function(evt){
@@ -707,10 +708,10 @@ HF.SwipePanel = function SwipePanel(confObject){
             }, // touchEndHandler()
             
             /**
-             *  Handles resize event
-             *  @method resizeHandler
-             *  @param {Object} evt Event object
-             *  @static
+             * Handles resize event
+             * @method resizeHandler
+             * @param {Object} evt Event object
+             * @static
              */
             
             resizeHandler: function(evt){
@@ -731,13 +732,13 @@ HF.SwipePanel = function SwipePanel(confObject){
             }, // resizeHandler()
             
             /**
-             *  Dispatches custom html events
-             *  and optionally generates a dummy swipe gesture coordinates delta
-             *  @method dispatchCustomEvent
-             *  @param {String} eventType Type of event to be broadcasted
-             *  @param {Object} eventTarget HTMLElement: target of custom html event
-             *  @param {Boolean} triggerSwipe Indicates wheter to generate a dummy swipe coordinates delta
-             *  @static
+             * Dispatches custom html events
+             * and optionally generates a dummy swipe gesture coordinates delta
+             * @method dispatchCustomEvent
+             * @param {String} eventType Type of event to be broadcasted
+             * @param {Object} eventTarget HTMLElement: target of custom html event
+             * @param {Boolean} triggerSwipe Indicates wheter to generate a dummy swipe coordinates delta
+             * @static
              */
             
             dispatchCustomEvent: function(eventType, eventTarget, triggerSwipe){
@@ -839,13 +840,14 @@ HF.SwipePanel = function SwipePanel(confObject){
                                        domTransform: "msTransform",
                                        radialGradient: "-ms-radial-gradient",
                                        repeatingLinearGradient: "-ms-repeating-linear-gradient",
-                                       _translate: "translate",
+                                       translate: "translate",
                                        userSelect: "-ms-user-select"} :
                {domTransition: "transition",
                 transition: "transition",
                 transform: "transform",
                 domTransform: "transform",
                 radialGradient: "radial-gradient",
+				translate: "translate",
                 repeatingLinearGradient: "repeating-linear-gradient",
                 userSelect: "user-select"};
     
@@ -872,8 +874,8 @@ HF.SwipePanel = function SwipePanel(confObject){
     ManageEvents.attachEventListeners();
     
     /**
-     *  Toggles the swipe panel
-     *  @method toggle
+     * Toggles the swipe panel
+     * @method toggle
      */
      
     HF.SwipePanel.prototype.toggle = function(){
@@ -883,8 +885,8 @@ HF.SwipePanel = function SwipePanel(confObject){
     }; // toggle()
     
     /**
-     *  Opens the swipe panel
-     *  @method open
+     * Opens the swipe panel
+     * @method open
      */
     
     HF.SwipePanel.prototype.open = function(){
@@ -898,8 +900,8 @@ HF.SwipePanel = function SwipePanel(confObject){
     }; // open();
     
     /**
-     *  Closes the swipe panel
-     *  @method close
+     * Closes the swipe panel
+     * @method close
      */
     
     HF.SwipePanel.prototype.close = function(){
@@ -913,9 +915,9 @@ HF.SwipePanel = function SwipePanel(confObject){
     }; // close()
     
     /**
-     *  Indicates wheter the swipe panel is open or closed
-     *  @property isOpen 
-     *  @type Boolean
+     * Indicates wheter the swipe panel is open or closed
+     * @property isOpen 
+     * @type Boolean
      */
     
     this.isOpen = ManageInterface.getWrapperInstance().isOpen;
