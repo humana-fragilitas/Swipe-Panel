@@ -131,7 +131,7 @@ HF.SwipePanel = function SwipePanel(confObject){
         wrapperLabelCSSOpen.push("border-bottom-left-radius: 4px;");
         wrapperLabelCSSOpen.push("border-bottom-right-radius: 4px;");
         wrapperLabelCSSOpen.push("text-shadow: 0 -1px ");
-		wrapperLabelCSSOpen.push(configuration.swipePanelLabelColours[2] + ";");
+	wrapperLabelCSSOpen.push(configuration.swipePanelLabelColours[2] + ";");
         wrapperLabelCSSOpen.push("box-shadow: 0 2px 4px rgba(0,0,0,.5),");
         wrapperLabelCSSOpen.push("0 1px 1px rgba(0,0,0,.2),");
         wrapperLabelCSSOpen.push("0 1px 1px #333333 inset;");
@@ -847,7 +847,7 @@ HF.SwipePanel = function SwipePanel(confObject){
                 domTransform: "transform",
                 radialGradient: "radial-gradient",
                 repeatingLinearGradient: "repeating-linear-gradient",
-				translate: "translate",
+		translate: "translate",
                 userSelect: "user-select"};
     
     // check configuration object consistency
