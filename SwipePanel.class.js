@@ -642,7 +642,7 @@ HF.SwipePanel = function SwipePanel(confObject){
                 offsetParentSize = ManageInterface.getOffsetParentSize();
                 
                 swipePanelCoords.y2 = isW3CTouchEnabled ? evt.touches[0].screenY :
-						isMSTouchEnabled ? evt.clientY : evt.clientY;;
+						isMSTouchEnabled ? evt.clientY : evt.clientY;
                 swipePanelCoords.d = Math.abs((swipePanelCoords.y1 - swipePanelCoords.y2));
                 
                 if (!swipePanelInstance.isOpen) {
