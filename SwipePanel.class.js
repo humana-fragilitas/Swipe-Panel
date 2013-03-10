@@ -1,7 +1,7 @@
 ﻿/**
  * Swipe Panel Class (beta)
  *
- * © 2012 Andrea Blasio
+ * © 2012-2013 Andrea Blasio
  *
  * Released under MIT License & GNU Free Documentation License
  *
@@ -617,7 +617,8 @@ HF.SwipePanel = function SwipePanel(confObject){
                 if (!swipePanelInstance.isDragged) {
                     
                     evt.preventDefault();
-                    swipePanelCoords.y1 = (evt.screenY || evt.touches[0].screenY);
+                    swipePanelCoords.y1 = isW3CTouchEnabled ? evt.touches[0].screenY :
+							isMSTouchEnabled ? evt.clientY : evt.clientY;
                     offsetParentInstance.addEventListener(touchMoveEvent, ManageEvents.touchMoveHandler, false);
                 
                 }
@@ -640,7 +641,8 @@ HF.SwipePanel = function SwipePanel(confObject){
                 
                 offsetParentSize = ManageInterface.getOffsetParentSize();
                 
-                swipePanelCoords.y2 = (evt.screenY || evt.touches[0].screenY);
+                swipePanelCoords.y2 = isW3CTouchEnabled ? evt.touches[0].screenY :
+						isMSTouchEnabled ? evt.clientY : evt.clientY;;
                 swipePanelCoords.d = Math.abs((swipePanelCoords.y1 - swipePanelCoords.y2));
                 
                 if (!swipePanelInstance.isOpen) {
