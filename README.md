@@ -14,25 +14,23 @@ Usage
 -----
 
 ### html markup ###
-<pre><code>&lt;!-- basic required markup structure --&gt;
+```html
+<!-- basic required markup structure -->
 
-&lt;!-- the outer element serves as positioning context --&gt;
-&lt;div id=&quot;swipePanelWrapper&quot;&gt;
+<!-- the outer element serves as positioning context -->
+<div id="swipePanelWrapper">
 
-   &lt;!-- your content here --&gt;
+   <!-- the inner element serves as the swipe panel wrapper -->
+   <div id="swipePanel">
 
-   &lt;!-- the inner element serves as the swipe panel wrapper --&gt;
-   &lt;div id=&quot;swipePanel&quot;&gt;
+      <!-- your content here -->
 
-      &lt;!-- your content here --&gt;
+   </div>
 
-   &lt;/div&gt;
-
-&lt;/div&gt;
-</code></pre>
+</div>
+```
 ### javascript ###
-<pre><code>// configuration and constructor invocation 
-
+```javascript
 var configuration,
     swipePanel;
 
@@ -75,5 +73,5 @@ configuration = {
 
 };
 
-swipePanel = new SwipePanel(swipePanelObjConf);
-</code></pre>
+swipePanel = new SwipePanel(configuration);
+```
